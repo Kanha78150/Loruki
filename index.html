@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+
+
+    <title>Loruki | Cloud Hoisting For Everyone</title>
+</head>
+
+<body>
+    <!--navbar-->
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo">Loraki.</h1>
+            <nav>
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li> <a href="features.html">Features</a></li>
+                    <li> <a href="docs.html">Docs</a></li>
+                    <li> <a href="aboutUs.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!--showcase-->
+    <section class="showcase">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>Easier Deployment</h1>
+                <p>Deploy web apps of all kinds from large scale enterprise APIs to static websites for individuals.Fill
+                    out our form to try a demo of our platform</p>
+                <a href="features.html" class="btn btn-outline">Read More</a>
+            </div>
+            <div class="showcase-form card">
+                <h2>Request a Demo</h2>
+                <form id="userForm" name="contact" method="POST" netlify-honeypot="bot-field data-netlify=" true">
+                    <div class="form-control">
+                        <input type="text" name="name" placeholder="Name" id="name" required>
+                    </div>
+                    <div class="form-control">
+                        <input type="text" name="company" placeholder="Company Name" id="company" requied>
+                    </div>
+                    <div class="form-control">
+                        <input type="email" name="email" placeholder="Email" id="email" required>
+                    </div>
+                    <button type="submit" class=" btn btn-primary">Submit</button>
+                </form>
+                <div id="response"></div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!--stats-->
+    <section class="stats">
+        <div class="container">
+            <h3 class="stats-heading text-center my-1">
+                welcome to the best platform for building applications of all types of modern architechture and scaling.
+            </h3>
+
+            <div class="grid grid-3 text-center my-4">
+                <div>
+                    <i class="fas fa-server fa-3x"></i>
+                    <h3>10,349,405</h3>
+                    <p class="text-secondary">Deployment</p>
+                </div>
+                <div>
+                    <i class="fas fa-upload fa-3x"></i>
+                    <h3>987 TB</h3>
+                    <p class="text-secondary">Published</p>
+
+                </div>
+                <div>
+                    <i class="fas fa-project-diagram fa-3x"></i>
+                    <h3>2,343,265</h3>
+                    <p class="text-secondary">Projects</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--cli-->
+    <section class="cli">
+        <div class="container grid">
+            <img src="images/cli.png" alt="">
+            <div class="card">
+                <h3>Easy to use cross platform CLI</h3>
+            </div>
+            <div class="card">
+                <h3>Deploy in seconds</h3>
+            </div>
+        </div>
+    </section>
+
+    <!--cloud-->
+    <section class="cloud bg-primary my-2 py-2">
+        <div class="container grid">
+            <div class="text-center">
+                <h2 class="lg">Extreme Cloud Hoisting</h2>
+                <p class="lead my-1">Cloud hoisting like u have never seen before.Fast,efficient and scalable.</p>
+                <a href="features.html" class="btn btn-dark">Read More</a>
+            </div>
+            <img src="images/cloud.png" alt="">
+
+        </div>
+    </section>
+
+    <!--languages-->
+    <section class="languages">
+        <h2 class="md text-center my-2">
+            Supported Languages
+        </h2>
+        <div class="container flex">
+            <div class="card">
+                <h4> Node.js</h4>
+                <img src="images/node.png" alt="" class="lang-img">
+            </div>
+            <div class="card">
+                <h4> Python</h4>
+                <img src="images/python.png" alt="" class="lang-img">
+            </div>
+            <div class="card">
+                <h4>c#</h4>
+                <img src="images/csharp.png" alt="" class="lang-img">
+            </div>
+            <div class="card">
+                <h4> Ruby</h4>
+                <img src="images/Ruby.png" alt="" class="lang-img">
+            </div>
+            <div class="card">
+                <h4> PHP</h4>
+                <img src="images/php.png" alt="" class="lang-img">
+            </div>
+            <div class="card">
+                <h4> Scala</h4>
+                <img src="images/scala.png" alt="" class="lang-img">
+            </div>
+            <div class="card">
+                <h4> Clojure</h4>
+                <img src="images/clojure.png" alt="" class="lang-img">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Footer-->
+    <footer class="footer bg-dark py-5">
+        <container class="grid grid-3">
+            <div class="apply">
+                <p>&copy;2020 Loraki.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Documentation</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="https://github.com/Shrutipriya23/loruki-website" target="_blank"><i
+                        class="fab fa-github fa-2x"></i></a>
+            </div>
+        </container>
+    </footer>
+
+
+
+
+    <script>
+        const form = document.getElementById('userForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value,
+            };
+
+            try {
+                const response = await fetch('http://localhost:5000/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                document.getElementById('response').textContent = `${result.message}`;
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('response').textContent = 'Error submitting form';
+            }
+        });
+    </script>
+</body>
+
+</html>
