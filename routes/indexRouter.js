@@ -1,9 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const { homeController } = require("../controllers/index-controller");
 
-// controller import
-const { homeController } = require('../controllers/index-controller');
-
-router.get("/", homeController);
+router.all("/", homeController); // Handle both GET and POST requests
 
 module.exports = router;

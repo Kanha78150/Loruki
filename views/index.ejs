@@ -10,13 +10,14 @@
 
 
     <title>Loruki | Cloud Hoisting For Everyone</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
     <!--navbar-->
     <div class="navbar">
         <div class="container flex">
-            <h1 class="logo">Loraki.</h1>
+            <h1 class="logo">Loruki</h1>
             <nav>
                 <ul>
                     <li> <a href="index.html">Home</a></li>
@@ -39,19 +40,19 @@
             </div>
             <div class="showcase-form card">
                 <h2>Request a Demo</h2>
-                <form id="userForm" name="contact" method="POST" netlify-honeypot="bot-field data-netlify=" true">
+                <form id="userForm" method="POST">
                     <div class="form-control">
                         <input type="text" name="name" placeholder="Name" id="name" required>
                     </div>
                     <div class="form-control">
-                        <input type="text" name="company" placeholder="Company Name" id="company" requied>
+                        <input type="text" name="company" placeholder="Company Name" id="company" required>
                     </div>
                     <div class="form-control">
                         <input type="email" name="email" placeholder="Email" id="email" required>
                     </div>
-                    <button type="submit" class=" btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-                <div id="response"></div>
+                <div id="responseMessage" style="margin-top: 20px; color: green; font-weight: 600;"></div>
             </div>
 
 
@@ -90,7 +91,7 @@
     <!--cli-->
     <section class="cli">
         <div class="container grid">
-            <img src="images/cli.png" alt="">
+            <img src="/images/cli.png" alt="">
             <div class="card">
                 <h3>Easy to use cross platform CLI</h3>
             </div>
@@ -106,7 +107,7 @@
             <div class="text-center">
                 <h2 class="lg">Extreme Cloud Hoisting</h2>
                 <p class="lead my-1">Cloud hoisting like u have never seen before.Fast,efficient and scalable.</p>
-                <a href="features.html" class="btn btn-dark">Read More</a>
+                <a href="" class="btn btn-dark">Read More</a>
             </div>
             <img src="/images/cloud.png" alt="">
 
@@ -156,14 +157,14 @@
     <footer class="footer bg-dark py-5">
         <container class="grid grid-3">
             <div class="apply">
-                <p>&copy;2020 Loraki.</p>
+                <p>&copy;2025 Loraki.</p>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="docs.html">Documentation</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">About Us</a></li>
                 </ul>
             </nav>
             <div class="social">
@@ -175,34 +176,7 @@
     </footer>
 
 
-
-
-    <script>
-        const form = document.getElementById('userForm');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                company: document.getElementById('company').value,
-            };
-
-            try {
-                const response = await fetch('http://localhost:5000/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-
-                const result = await response.json();
-                document.getElementById('response').textContent = `${result.message}`;
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('response').textContent = 'Error submitting form';
-            }
-        });
-    </script>
+    <script src="/js/formValidation.js"></script>
 </body>
 
 </html>
