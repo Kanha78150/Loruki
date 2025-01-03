@@ -1,22 +1,20 @@
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-
 const app = express();
-const PORT = 5000;
+const path = require('path')
 
-app.use(cors());
-app.use(bodyParser.json());
+require("dotenv").config();
 
-app.post('/submit', (req, res) => {
-    const { name, email, company } = req.body;
+app.set("view engine", "ejs")
+app.use(express.static("public"))
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+const indexRouter = require('./routes/indexRouter');
+const aboutRouter = require('./routes/aboutRouter');
+app.use('/', indexRouter);
+app.use('/about', aboutRouter);
 
 
-    console.log('Received:', { name, email, company });
-
-    res.json({ message: 'Form submitted successfully!' });
-});
-
-app.listen(PORT, () => {
-    console.log(`Mock API running at http://localhost:${PORT}`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Server is running on port 3000');
 });
